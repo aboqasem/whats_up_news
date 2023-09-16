@@ -17,5 +17,5 @@ jobs:
         with:
           coverage-files: coverage/lcov.info
           minimum-coverage: 80
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           update-comment: tr
