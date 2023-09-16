@@ -2,6 +2,7 @@ name: test
 on: [ push, pull_request, workflow_dispatch ]
 jobs:
   test-and-coverage:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
