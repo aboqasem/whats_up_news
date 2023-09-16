@@ -38,14 +38,14 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
-                  onPressed: () {
-                    context.router.push(ArticlesRoute());
+                  onPressed: () async {
+                    await context.router.push(ArticlesRoute());
                   },
                   child: const Text('Articles'),
                 ),
                 ElevatedButton(
-                  onPressed: () {
-                    context.router.push(SearchRoute());
+                  onPressed: () async {
+                    await context.router.push(SearchRoute());
                   },
                   child: const Text('Search'),
                 ),

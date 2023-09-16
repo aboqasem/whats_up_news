@@ -17,6 +17,7 @@ linter:
     prefer_single_quotes: true
     avoid_init_to_null: true
     use_string_buffers: true
+    require_trailing_commas: true
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
