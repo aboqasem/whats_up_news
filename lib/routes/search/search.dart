@@ -16,20 +16,21 @@ class SearchPage extends StatelessWidget {
         title: Text(title),
       ),
       body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text(
-            'Search',
-          ),
-          ElevatedButton(
-            onPressed: () {
-              context.router.push(ArticlesRoute());
-            },
-            child: const Text('Articles'),
-          ),
-        ],
-      )),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'Search',
+            ),
+            ElevatedButton(
+              onPressed: () {
+                context.router.push(ArticlesRoute());
+              },
+              child: const Text('Articles'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
