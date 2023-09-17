@@ -59,13 +59,13 @@ void main() {
         final articlesButton = find.widgetWithText(ElevatedButton, 'Articles');
         expect(articlesButton, findsOneWidget);
 
-        when(mockStackRouter.push(ArticlesRoute()))
+        when(mockStackRouter.push(const ArticlesRoute()))
             .thenAnswer((_) async => null);
 
         await tester.tap(articlesButton);
         await tester.pumpAndSettle();
 
-        verify(mockStackRouter.push(ArticlesRoute())).called(1);
+        verify(mockStackRouter.push(const ArticlesRoute())).called(1);
       });
     });
   });

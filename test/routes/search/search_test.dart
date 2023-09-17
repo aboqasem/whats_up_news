@@ -35,7 +35,7 @@ void main() {
       testWidgets('go to Articles page', (tester) async {
         await tester.pumpWidget(app).then((_) => tester.pumpAndSettle());
 
-        when(mockStackRouter.push(ArticlesRoute()))
+        when(mockStackRouter.push(const ArticlesRoute()))
             .thenAnswer((_) async => null);
 
         final articlesButton = find.widgetWithText(ElevatedButton, 'Articles');
@@ -44,7 +44,7 @@ void main() {
         await tester.tap(articlesButton);
         await tester.pumpAndSettle();
 
-        verify(mockStackRouter.push(ArticlesRoute())).called(1);
+        verify(mockStackRouter.push(const ArticlesRoute())).called(1);
       });
     });
   });

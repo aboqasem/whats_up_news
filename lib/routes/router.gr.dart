@@ -20,14 +20,9 @@ abstract class $AppRouter extends _i4.RootStackRouter {
   @override
   final Map<String, _i4.PageFactory> pagesMap = {
     ArticlesRoute.name: (routeData) {
-      final args = routeData.argsAs<ArticlesRouteArgs>(
-          orElse: () => const ArticlesRouteArgs());
       return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i1.ArticlesPage(
-          key: args.key,
-          title: args.title,
-        ),
+        child: const _i1.ArticlesPage(),
       );
     },
     HomeRoute.name: (routeData) {
@@ -57,40 +52,16 @@ abstract class $AppRouter extends _i4.RootStackRouter {
 
 /// generated route for
 /// [_i1.ArticlesPage]
-class ArticlesRoute extends _i4.PageRouteInfo<ArticlesRouteArgs> {
-  ArticlesRoute({
-    _i5.Key? key,
-    String title = 'Articles',
-    List<_i4.PageRouteInfo>? children,
-  }) : super(
+class ArticlesRoute extends _i4.PageRouteInfo<void> {
+  const ArticlesRoute({List<_i4.PageRouteInfo>? children})
+      : super(
           ArticlesRoute.name,
-          args: ArticlesRouteArgs(
-            key: key,
-            title: title,
-          ),
           initialChildren: children,
         );
 
   static const String name = 'ArticlesRoute';
 
-  static const _i4.PageInfo<ArticlesRouteArgs> page =
-      _i4.PageInfo<ArticlesRouteArgs>(name);
-}
-
-class ArticlesRouteArgs {
-  const ArticlesRouteArgs({
-    this.key,
-    this.title = 'Articles',
-  });
-
-  final _i5.Key? key;
-
-  final String title;
-
-  @override
-  String toString() {
-    return 'ArticlesRouteArgs{key: $key, title: $title}';
-  }
+  static const _i4.PageInfo<void> page = _i4.PageInfo<void>(name);
 }
 
 /// generated route for

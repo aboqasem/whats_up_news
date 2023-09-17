@@ -24,7 +24,7 @@ class SearchPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                context.router.push(ArticlesRoute());
+                context.router.push(const ArticlesRoute());
               },
               child: const Text('Articles'),
             ),

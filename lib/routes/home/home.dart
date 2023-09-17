@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 ElevatedButton(
                   onPressed: () async {
-                    await context.router.push(ArticlesRoute());
+                    await context.router.push(const ArticlesRoute());
                   },
                   child: const Text('Articles'),
                 ),
